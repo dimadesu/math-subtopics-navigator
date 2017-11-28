@@ -18,8 +18,12 @@ require('../config/env');
 const jest = require('jest');
 const argv = process.argv.slice(2);
 
-// Watch unless on CI or in coverage mode
-if (!process.env.CI && argv.indexOf('--coverage') < 0) {
+// Watch unless on CI or in coverage mode or in no-watch mode
+if (
+  !process.env.CI &&
+  argv.indexOf('--coverage') < 0 &&
+  argv.indexOf('--no-watch') < 0
+) {
   argv.push('--watch');
 }
 
