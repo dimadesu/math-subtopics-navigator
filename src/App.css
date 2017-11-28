@@ -55,6 +55,12 @@
 .navigation__item:after {
   content: '';
   flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.navigation__item--completed:before,
+.navigation__item--completed:after {
   height: 2px;
   background-color: #50D2C2;
 }
@@ -72,8 +78,13 @@
   height: 28px;
   text-decoration: none;
   color: white;
-  background-color: #50D2C2;
   border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.navigation__item--completed .navigation__item__link {
+  border: 0;
+  background-color: #50D2C2;
 }
 
 .navigation__item--active .navigation__item__link {
