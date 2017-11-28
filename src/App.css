@@ -42,6 +42,17 @@
   display: flex;
   width: 100%;
   align-items: center;
+}
+
+.navigation__arrow {
+  padding: 0 15px;
+}
+
+.navigation__items {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  align-items: center;
   font-size: 12px;
 }
 
