@@ -26,10 +26,18 @@ class App extends React.Component {
             <div className="subtopic__title">
               3. Similar Triangles
             </div>
-            <div className="subtopic__completed--completed">
+            <div
+              className="subtopic__completeness subtopic__completeness--true"
+            >
               <img src="/assets/tick-big.svg" alt="Completed"/>
             </div>
-            <button type="button">Let's Go</button>
+            <div className="subtopic__complete-button">
+              <button
+                type="button"
+              >
+                Let's Go
+              </button>
+            </div>
           </div>
         </div>
         <div className="tabs-bar">
