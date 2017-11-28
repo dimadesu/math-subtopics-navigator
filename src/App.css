@@ -76,6 +76,12 @@
   font-size: 26px;
 }
 
+.subtopic__diagonal {
+  height: 35px;
+  background-color: white;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
 .subtopic__complete-button {
   background-color: white;
 }

@@ -31,6 +31,7 @@ class App extends React.Component {
             >
               <img src="/assets/tick-big.svg" alt="Completed"/>
             </div>
+            <div className="subtopic__diagonal"/>
             <div className="subtopic__complete-button">
               <button
                 type="button"
