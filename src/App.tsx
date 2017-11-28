@@ -38,13 +38,15 @@ class App extends React.Component {
         </div>
         <div className="subtopics">
           <div className="subtopic">
-            <div className="subtopic__title">
-              3. Similar Triangles
-            </div>
-            <div
-              className="subtopic__completeness subtopic__completeness--true"
-            >
-              <img src="/assets/tick-big.svg" alt="Completed"/>
+            <div className="subtopic__title-n-completeness">
+              <div className="subtopic__title">
+                3. Similar Triangles
+              </div>
+              <div
+                className="subtopic__completeness subtopic__completeness--true"
+              >
+                <img src="/assets/tick-big.svg" alt="Completed"/>
+              </div>
             </div>
             <div className="subtopic__diagonal"/>
             <div className="subtopic__complete-button">

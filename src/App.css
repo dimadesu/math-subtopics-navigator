@@ -30,8 +30,8 @@
 
 .menu,
 .avatar {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .topic {
@@ -95,7 +95,7 @@
 .subtopics {
   flex: 1;
   display: flex;
-  padding: 20px;
+  padding: 20px 45px 35px 45px;
   background-color: white;
 }
 
@@ -107,17 +107,30 @@
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .15);
 }
 
-.subtopic__title,
-.subtopic__completeness,
+.subtopic__title-n-completeness,
 .subtopic__complete-button {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.subtopic__title-n-completeness {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
 .subtopic__title {
-  font-size: 26px;
+  font-size: 25px;
+}
+
+.subtopic__completeness {
+  margin-top: 30px;
+}
+
+.subtopic__completeness--true img {
+  background-color: #50D2C2;
+  border-radius: 50px;
 }
 
 .subtopic__diagonal {
@@ -129,12 +142,8 @@
   margin-bottom: -1px;
 }
 
-.subtopic__completeness--true img {
-  background-color: #50D2C2;
-  border-radius: 50px;
-}
-
 .subtopic__complete-button {
+  flex: 1;
   background-color: white;
 }
 
@@ -145,7 +154,7 @@
   border: 0;
   border-radius: 25px;
   color: white;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .tabs-bar {
