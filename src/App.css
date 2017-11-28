@@ -45,7 +45,21 @@
 
 .navigation__item {
   flex: 1;
+  display: flex;
+  justify-content: center;
   text-align: center;
+}
+
+.navigation__item__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  text-decoration: none;
+  color: white;
+  background-color: #50D2C2;
+  border-radius: 14px;
 }
 
 .subtopics {
@@ -80,6 +94,14 @@
   height: 35px;
   background-color: white;
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  /* Sometimes there is a gap rendering between diagonal and button white bg,
+  so here make sure there is never a gap*/
+  margin-bottom: -1px;
+}
+
+.subtopic__completeness--true img {
+  background-color: #50D2C2;
+  border-radius: 50px;
 }
 
 .subtopic__complete-button {
@@ -87,7 +109,7 @@
 }
 
 .subtopic__complete-button button {
-  width: 200px;
+  width: 160px;
   background-color: #50D2C2;
   line-height: 50px;
   border: 0;

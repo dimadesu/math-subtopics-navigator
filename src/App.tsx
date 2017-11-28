@@ -16,9 +16,24 @@ class App extends React.Component {
             </div>
           </div>
           <div className="navigation">
-            <div className="navigation__item">1</div>
-            <div className="navigation__item">2</div>
-            <div className="navigation__item">3</div>
+            <div className="navigation__item">
+              <a href="#" className="navigation__item__link">1</a>
+            </div>
+            <div className="navigation__item">
+              <a href="#" className="navigation__item__link">1</a>
+            </div>
+            <div className="navigation__item">
+              <a href="#" className="navigation__item__link">1</a>
+            </div>
+            <div className="navigation__item">
+              <a href="#" className="navigation__item__link">1</a>
+            </div>
+            <div className="navigation__item">
+              <a href="#" className="navigation__item__link">1</a>
+            </div>
+            <div className="navigation__item">
+              <a href="#" className="navigation__item__link">1</a>
+            </div>
           </div>
         </div>
         <div className="subtopics">
