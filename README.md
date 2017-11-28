@@ -20,7 +20,7 @@
 
 ### Requirements
 
-- [ ] **Basic layout** – Implement the HTML/CSS layout as displayed in the mockup.
+- [x] **Basic layout** – Implement the HTML/CSS layout as displayed in the mockup.
 - [ ] **Data-driven content** – Integrate the provided data to dynamically generate the content.
 - [ ] **Navigation** – Implement page behaviour, such that when a numbered circle is clicked, the corresponding card appears in the white space below. The numbered circle should also appear selected.
 - [ ] **Complete subtopic behaviour** – When the "Let's Go" button is clicked, the completed state of that subtopic should be set true, and this should be reflected in the circle navigation and the card.

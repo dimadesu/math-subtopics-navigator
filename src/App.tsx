@@ -32,14 +32,14 @@ class App extends React.Component {
             <button type="button">Let's Go</button>
           </div>
         </div>
-        <div className="tab-bar">
-          <div className="tab-bar__item--active">
+        <div className="tabs-bar">
+          <div className="tabs-bar__item tabs-bar__item--active">
             <img src="/assets/tick.svg" alt="Tick"/>
           </div>
-          <div className="tab-bar__item">
+          <div className="tabs-bar__item">
             <img src="/assets/piechart.svg" alt="Pie chart"/>
           </div>
-          <div className="tab-bar__item">
+          <div className="tabs-bar__item">
             <img src="/assets/linegraph.svg" alt="Line graph"/>
           </div>
         </div>
