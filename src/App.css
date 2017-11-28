@@ -67,7 +67,7 @@
 .navigation__item-connection {
   height: 1px;
   flex: 1;
-  min-width: 30px;
+  min-width: 20px;
   background-color: rgba(255, 255, 255, .5);
 }
 
@@ -141,6 +141,7 @@
 
 .subtopic__completeness--true img {
   background-color: #50D2C2;
+  border: 1px solid white;
   border-radius: 50px;
 }
 
