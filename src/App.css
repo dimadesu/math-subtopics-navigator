@@ -41,44 +41,37 @@
 .navigation {
   display: flex;
   width: 100%;
+  align-items: center;
   font-size: 12px;
 }
 
 .navigation__item {
-  flex: 1;
+  width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navigation__item:before,
-.navigation__item:after {
-  content: '';
+.navigation__item-connection {
   flex: 1;
   height: 1px;
   background-color: rgba(255, 255, 255, .5);
 }
 
-.navigation__item--completed:before,
-.navigation__item--completed:after {
+.navigation__item--completed + .navigation__item-connection {
   height: 2px;
   background-color: #50D2C2;
-}
-
-.navigation__item:first-child:before,
-.navigation__item:last-child:after {
-  background-color: transparent;
 }
 
 .navigation__item__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
   text-decoration: none;
   color: white;
-  border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, .5);
 }
 

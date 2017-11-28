@@ -19,18 +19,23 @@ class App extends React.Component {
             <div className="navigation__item navigation__item--completed">
               <a href="#" className="navigation__item__link">1</a>
             </div>
+            <div className="navigation__item-connection"/>
             <div className="navigation__item navigation__item--completed">
               <a href="#" className="navigation__item__link">2</a>
             </div>
+            <div className="navigation__item-connection"/>
             <div className="navigation__item navigation__item--completed navigation__item--active">
               <a href="#" className="navigation__item__link">3</a>
             </div>
+            <div className="navigation__item-connection"/>
             <div className="navigation__item">
               <a href="#" className="navigation__item__link">4</a>
             </div>
+            <div className="navigation__item-connection"/>
             <div className="navigation__item">
               <a href="#" className="navigation__item__link">5</a>
             </div>
+            <div className="navigation__item-connection"/>
             <div className="navigation__item">
               <a href="#" className="navigation__item__link">6</a>
             </div>
