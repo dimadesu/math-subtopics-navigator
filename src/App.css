@@ -47,7 +47,20 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+}
+
+.navigation__item:before,
+.navigation__item:after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: #50D2C2;
+}
+
+.navigation__item:first-child:before,
+.navigation__item:last-child:after {
+  background-color: transparent;
 }
 
 .navigation__item__link {
