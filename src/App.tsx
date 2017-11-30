@@ -3,6 +3,7 @@ import './App.css';
 
 import { Header } from './Header/Header';
 import { Subtopics } from './Subtopics/Subtopics';
+import { TabsBar } from './TabsBar/TabsBar';
 
 class App extends React.Component {
   render() {
@@ -10,17 +11,7 @@ class App extends React.Component {
       <div className="app">
         <Header />
         <Subtopics />
-        <div className="tabs-bar">
-          <div className="tabs-bar__item tabs-bar__item--active">
-            <img src="/assets/tick.svg" alt="Tick"/>
-          </div>
-          <div className="tabs-bar__item">
-            <img src="/assets/piechart.svg" alt="Pie chart"/>
-          </div>
-          <div className="tabs-bar__item">
-            <img src="/assets/linegraph.svg" alt="Line graph"/>
-          </div>
-        </div>
+        <TabsBar />
       </div>
     );
   }
