@@ -18,6 +18,7 @@ export class App extends React.Component<{
         key={subtopic.id}
         id={subtopic.id}
         completed={subtopic.completed}
+        active={false}
       />
     ));
   }

@@ -5,6 +5,7 @@ import './NavigationItem.css';
 export interface NavigationItemProps {
   id: number;
   completed: boolean;
+  active: boolean;
 }
 
 export class NavigationItem extends React.Component<NavigationItemProps> {
@@ -12,7 +13,7 @@ export class NavigationItem extends React.Component<NavigationItemProps> {
     return classNames({
       'navigation__item': true,
       'navigation__item--completed': this.props.completed,
-      'navigation__item--active': false,
+      'navigation__item--active': this.props.active,
     });
   }
 
