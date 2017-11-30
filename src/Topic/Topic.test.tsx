@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Topic } from './Topic';
 
-describe('Header', () => {
+describe('Topic', () => {
   it('renders without crashing', () => {
     const wrapper = shallow(
       <Topic
