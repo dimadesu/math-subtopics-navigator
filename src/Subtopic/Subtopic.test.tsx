@@ -15,6 +15,7 @@ describe('Subtopic', () => {
         id={subtopic.id}
         title={subtopic.title}
         completed={subtopic.completed}
+        onButtonClick={() => undefined}
       />
     );
 
@@ -27,6 +28,7 @@ describe('Subtopic', () => {
         id={subtopic.id}
         title={subtopic.title}
         completed={subtopic.completed}
+        onButtonClick={() => undefined}
       />
     );
 
@@ -39,6 +41,7 @@ describe('Subtopic', () => {
         id={subtopic.id}
         title={subtopic.title}
         completed={subtopic.completed}
+        onButtonClick={() => undefined}
       />
     );
 
@@ -51,6 +54,7 @@ describe('Subtopic', () => {
         id={subtopic.id}
         title={subtopic.title}
         completed={true}
+        onButtonClick={() => undefined}
       />
     );
 
@@ -63,6 +67,7 @@ describe('Subtopic', () => {
         id={subtopic.id}
         title={subtopic.title}
         completed={false}
+        onButtonClick={() => undefined}
       />
     );
 

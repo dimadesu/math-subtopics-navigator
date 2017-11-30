@@ -12,6 +12,7 @@ export interface SubtopicProps {
   id: number;
   title: string;
   completed: boolean;
+  onButtonClick: (subtopicId: number) => void;
 }
 
 export class Subtopic extends React.Component<SubtopicProps> {
@@ -39,6 +40,7 @@ export class Subtopic extends React.Component<SubtopicProps> {
         <div className="subtopic__complete-button">
           <button
             type="button"
+            onClick={() => this.props.onButtonClick(this.props.id)}
           >
             Let's Go
           </button>

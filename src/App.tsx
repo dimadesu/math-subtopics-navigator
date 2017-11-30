@@ -16,6 +16,7 @@ export interface AppProps {
 
 export interface AppState {
   activeSubtopicId: number;
+  subtopics: SubtopicModel[];
 }
 
 export class App extends React.Component<AppProps, AppState> {
@@ -25,11 +26,12 @@ export class App extends React.Component<AppProps, AppState> {
     // TODO: We could have some flavour of Flux store in future, but for now let's keep it simple
     this.state = {
       activeSubtopicId: 1,
+      subtopics: props.subtopics,
     };
   }
 
   renderNavigationItems() {
-    return this.props.subtopics.map(subtopic => (
+    return this.state.subtopics.map(subtopic => (
       <NavigationItem
         key={subtopic.id}
         id={subtopic.id}
@@ -44,8 +46,23 @@ export class App extends React.Component<AppProps, AppState> {
     ));
   }
 
+  subtopicOnButtonClick = (subtopicId: number) => {
+    const _newSubtopics = this.state.subtopics.map(subtopic => {
+      if (subtopic.id === subtopicId) {
+        const _subtopic = Object.assign({}, subtopic); // Immutable copy
+        _subtopic.completed = true;
+        return _subtopic;
+      }
+      return subtopic;
+    });
+
+    this.setState({
+      subtopics: _newSubtopics,
+    });
+  }
+
   renderActiveSubtopic() {
-    const activeSubtopic = this.props.subtopics.find(
+    const activeSubtopic = this.state.subtopics.find(
       subtopic => subtopic.id === this.state.activeSubtopicId
     );
 
@@ -55,6 +72,7 @@ export class App extends React.Component<AppProps, AppState> {
           id={activeSubtopic.id}
           title={activeSubtopic.title}
           completed={activeSubtopic.completed}
+          onButtonClick={this.subtopicOnButtonClick}
         />
       );
     } else {
