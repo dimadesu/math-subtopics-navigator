@@ -1,7 +1,12 @@
 import * as React from 'react';
 import './Header.css';
+import { Topic } from '../types';
 
-export class Header extends React.Component {
+export interface HeaderProps {
+  topic: Topic;
+}
+
+export class Header extends React.Component<HeaderProps> {
   render() {
     return (
       <div className="header">
@@ -9,7 +14,7 @@ export class Header extends React.Component {
           <div className="menu">
             <img src="/assets/menu.svg" alt="Menu"/>
           </div>
-          <div className="topic">Geometry</div>
+          <div className="topic">{this.props.topic.title}</div>
           <div className="avatar">
             <img src="/assets/avatar.png" alt="Avatar"/>
           </div>

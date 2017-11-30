@@ -21,7 +21,7 @@ export class App extends React.Component<{
   render() {
     return (
       <div className="app">
-        <Header>
+        <Header topic={this.props.topic}>
           <Navigation
             navigationItems={this.renderNavigationItems()}
           />
