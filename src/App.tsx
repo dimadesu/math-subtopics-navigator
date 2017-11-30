@@ -14,7 +14,10 @@ export class App extends React.Component<{
 }> {
   renderNavigationItems() {
     return this.props.subtopics.map(subtopic => (
-      <NavigationItem key={subtopic.id}/>
+      <NavigationItem
+        key={subtopic.id}
+        id={subtopic.id}
+      />
     ));
   }
 
