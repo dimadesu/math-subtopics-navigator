@@ -1,16 +1,26 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import { App } from './App';
-import { topic, subtopics } from './data';
 import { Topic, Subtopic } from './types';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <App
-      topic={topic as Topic}
-      subtopics={subtopics as Subtopic[]}
-    />,
-    div
-  );
+describe('App', () => {
+  const topic = {
+    title: 'Geometry',
+  };
+
+  const subtopics = [
+    { id: 1, title: 'Triangles', completed: true },
+  ];
+
+  it('renders without crashing', () => {
+    const wrapper = shallow(
+      <App
+        topic={topic as Topic}
+        subtopics={subtopics as Subtopic[]}
+      />
+    );
+
+    expect(wrapper.length).toBe(1);
+  });
+
 });
