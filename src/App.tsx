@@ -17,6 +17,7 @@ export class App extends React.Component<{
       <NavigationItem
         key={subtopic.id}
         id={subtopic.id}
+        completed={subtopic.completed}
       />
     ));
   }
