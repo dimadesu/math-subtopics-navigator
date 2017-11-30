@@ -19,7 +19,7 @@
   flex-direction: column;
 }
 
-.subtopic__title {
+.subtopic__id-n-title {
   font-size: 25px;
 }
 
@@ -27,10 +27,13 @@
   margin-top: 30px;
 }
 
-.subtopic__completeness--true img {
-  background-color: #50D2C2;
+.subtopic__completeness img {
   border: 1px solid white;
   border-radius: 50px;
+}
+
+.subtopic__completeness--true img {
+  background-color: #50D2C2;
 }
 
 .subtopic__diagonal {

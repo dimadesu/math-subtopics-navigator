@@ -22,13 +22,13 @@
 
 - [x] **Basic layout** – Implement the HTML/CSS layout as displayed in the mockup.
 - [x] **Data-driven content** – Integrate the provided data to dynamically generate the content.
-- [ ] **Navigation** – Implement page behaviour, such that when a numbered circle is clicked, the corresponding card appears in the white space below. The numbered circle should also appear selected.
-- [ ] **Complete subtopic behaviour** – When the "Let's Go" button is clicked, the completed state of that subtopic should be set true, and this should be reflected in the circle navigation and the card.
+- [x] **Navigation** – Implement page behaviour, such that when a numbered circle is clicked, the corresponding card appears in the white space below. The numbered circle should also appear selected.
+- [x] **Complete subtopic behaviour** – When the "Let's Go" button is clicked, the completed state of that subtopic should be set true, and this should be reflected in the circle navigation and the card.
 
 ### Stretch Requirements
 
 - [ ] **Animations** – Implement a transition when a new card is selected.
-- [ ] **Basic responsive layout** – Implement responsive styles/behaviours to suit larger screens. You may decide how the layout makes use of the increased space.
+- [x] **Basic responsive layout** – Implement responsive styles/behaviours to suit larger screens. You may decide how the layout makes use of the increased space.
 - [ ] **Advanced responsive behaviour** – When the row of circles doesn't fit the available width, the left/right arrows should slide the row so that more circles are revealed.
 
 ## Assets

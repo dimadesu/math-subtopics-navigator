@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as classNames from 'classnames';
 import './Subtopic.css';
 
 export interface SubtopicModel {
@@ -7,17 +8,30 @@ export interface SubtopicModel {
   completed: boolean;
 }
 
-export class Subtopic extends React.Component {
+export interface SubtopicProps {
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
+export class Subtopic extends React.Component<SubtopicProps> {
+  renderCompletenessClassNames() {
+    return classNames({
+      'subtopic__completeness': true,
+      'subtopic__completeness--true': this.props.completed,
+    });
+  }
+
   render() {
     return (
       <div className="subtopic">
         <div className="subtopic__title-n-completeness">
-          <div className="subtopic__title">
-            3. Similar Triangles
+          <div className="subtopic__id-n-title">
+            <span className="subtopic__id">{this.props.id}</span>
+            {`. `}
+            <span className="subtopic__title">{this.props.title}</span>
           </div>
-          <div
-            className="subtopic__completeness subtopic__completeness--true"
-          >
+          <div className={this.renderCompletenessClassNames()}>
             <img src="/assets/tick-big.svg" alt="Completed"/>
           </div>
         </div>

@@ -44,6 +44,25 @@ export class App extends React.Component<AppProps, AppState> {
     ));
   }
 
+  renderActiveSubtopic() {
+    const activeSubtopic = this.props.subtopics.find(
+      subtopic => subtopic.id === this.state.activeSubtopicId
+    );
+
+    if (activeSubtopic) {
+      return (
+        <Subtopic
+          id={activeSubtopic.id}
+          title={activeSubtopic.title}
+          completed={activeSubtopic.completed}
+        />
+      );
+    } else {
+      return null;
+    }
+    
+  }
+
   render() {
     return (
       <div className="app">
@@ -56,7 +75,7 @@ export class App extends React.Component<AppProps, AppState> {
           }
         />
         <Subtopics>
-          <Subtopic />
+          {this.renderActiveSubtopic()}
         </Subtopics>
         <TabsBar />
       </div>
