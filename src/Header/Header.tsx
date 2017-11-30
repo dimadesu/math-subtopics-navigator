@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './Header.css';
-import { Topic } from '../types';
 
 export interface HeaderProps {
-  topic: Topic;
+  topic: JSX.Element;
+  navigation: JSX.Element;
 }
 
 export class Header extends React.Component<HeaderProps> {
@@ -14,12 +14,12 @@ export class Header extends React.Component<HeaderProps> {
           <div className="menu">
             <img src="/assets/menu.svg" alt="Menu"/>
           </div>
-          <div className="topic">{this.props.topic.title}</div>
+          {this.props.topic}
           <div className="avatar">
             <img src="/assets/avatar.png" alt="Avatar"/>
           </div>
         </div>
-        {this.props.children}
+        {this.props.navigation}
       </div>
     );
   }

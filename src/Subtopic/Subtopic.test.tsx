@@ -1,14 +1,11 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import { Header } from './Header';
+import { Subtopic } from './Subtopic';
 
 describe('Header', () => {
   it('renders without crashing', () => {
     const wrapper = shallow(
-      <Header
-        topic={{} as JSX.Element}
-        navigation={{} as JSX.Element}
-      />
+      <Subtopic />
     );
 
     expect(wrapper.length).toBe(1);

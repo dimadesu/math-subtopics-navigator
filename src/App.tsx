@@ -1,16 +1,17 @@
 import * as React from 'react';
 import './App.css';
-import { Topic, Subtopic } from './types';
 
 import { Header } from './Header/Header';
+import { Topic, TopicModel } from './Topic/Topic';
 import { Navigation } from './Navigation/Navigation';
 import { NavigationItem } from './NavigationItem/NavigationItem';
 import { Subtopics } from './Subtopics/Subtopics';
+import { Subtopic, SubtopicModel } from './Subtopic/Subtopic';
 import { TabsBar } from './TabsBar/TabsBar';
 
 export interface AppProps {
-  topic: Topic;
-  subtopics: Subtopic[];
+  topic: TopicModel;
+  subtopics: SubtopicModel[];
 }
 
 export interface AppState {
@@ -46,12 +47,17 @@ export class App extends React.Component<AppProps, AppState> {
   render() {
     return (
       <div className="app">
-        <Header topic={this.props.topic}>
-          <Navigation
-            navigationItems={this.renderNavigationItems()}
-          />
-        </Header>
-        <Subtopics />
+        <Header
+          topic={<Topic title={this.props.topic.title} />}
+          navigation={
+            <Navigation
+              navigationItems={this.renderNavigationItems()}
+            />
+          }
+        />
+        <Subtopics>
+          <Subtopic />
+        </Subtopics>
         <TabsBar />
       </div>
     );
