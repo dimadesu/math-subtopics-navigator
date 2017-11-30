@@ -6,6 +6,7 @@ export interface NavigationItemProps {
   id: number;
   completed: boolean;
   active: boolean;
+  onClick: (subtopicId: number) => void;
 }
 
 export class NavigationItem extends React.Component<NavigationItemProps> {
@@ -19,8 +20,16 @@ export class NavigationItem extends React.Component<NavigationItemProps> {
 
   render() {
     return (
-      <div className={this.renderClassNames()}>
-        <a href="#" className="navigation__item__link">{this.props.id}</a>
+      <div
+        className={this.renderClassNames()}
+        id={`navigation__item__id-${this.props.id}`}
+      >
+        <a
+          onClick={() => this.props.onClick(this.props.id)}
+          className="navigation__item__link"
+        >
+            {this.props.id}
+        </a>
       </div>
     );
   }

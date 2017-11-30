@@ -16,6 +16,7 @@ describe('NavigationItem', () => {
         id={subtopic.id}
         completed={subtopic.completed}
         active={subtopic.active}
+        onClick={(subtopcId) => undefined}
       />
     );
 
@@ -28,6 +29,7 @@ describe('NavigationItem', () => {
         id={subtopic.id}
         completed={subtopic.completed}
         active={subtopic.active}
+        onClick={(subtopcId) => undefined}
       />
     );
 
@@ -40,6 +42,7 @@ describe('NavigationItem', () => {
         id={subtopic.id}
         completed={subtopic.completed}
         active={subtopic.active}
+        onClick={(subtopcId) => undefined}
       />
     );
 
@@ -52,6 +55,7 @@ describe('NavigationItem', () => {
         id={subtopic.id}
         completed={false}
         active={subtopic.active}
+        onClick={(subtopcId) => undefined}
       />
     );
 
@@ -64,6 +68,7 @@ describe('NavigationItem', () => {
         id={subtopic.id}
         completed={subtopic.completed}
         active={true}
+        onClick={(subtopcId) => undefined}
       />
     );
 
@@ -76,6 +81,7 @@ describe('NavigationItem', () => {
         id={subtopic.id}
         completed={subtopic.completed}
         active={false}
+        onClick={(subtopcId) => undefined}
       />
     );
 

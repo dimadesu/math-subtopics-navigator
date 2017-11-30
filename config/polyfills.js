@@ -1,12 +1,5 @@
 'use strict';
 
-// Resolution for requestAnimationFrame not supported in jest error :
-// https://github.com/facebook/react/issues/9102#issuecomment-283873039
-window.addEventListener = () => {};
-window.requestAnimationFrame = () => {
-  throw new Error('requestAnimationFrame is not supported in Node');
-};
-
 var enzyme = require('enzyme');
 var Adapter = require('enzyme-adapter-react-16');
 
