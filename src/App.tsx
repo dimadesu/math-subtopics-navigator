@@ -11,6 +11,7 @@ import { Topic, Subtopic } from './types';
 export class App extends React.Component<{
   topic: Topic;
   subtopics: Subtopic[];
+  activeSubtopicId: number;
 }> {
   renderNavigationItems() {
     return this.props.subtopics.map(subtopic => (
@@ -18,7 +19,7 @@ export class App extends React.Component<{
         key={subtopic.id}
         id={subtopic.id}
         completed={subtopic.completed}
-        active={false}
+        active={subtopic.id === this.props.activeSubtopicId}
       />
     ));
   }

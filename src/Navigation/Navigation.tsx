@@ -13,7 +13,10 @@ export class Navigation extends React.Component<
           array.push(navigationItem);
           if (navigationItemIndex !== (this.props.navigationItems.length - 1)) {
             array.push(
-              <div className="navigation__item-connection"/>
+              <div
+                className="navigation__item-connection"
+                key={`connection-${navigationItemIndex}`}
+              />
             );
           }
           return array;

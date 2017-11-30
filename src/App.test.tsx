@@ -1,22 +1,28 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { App } from './App';
-import { Topic, Subtopic } from './types';
 
 describe('App', () => {
-  const topic = {
-    title: 'Geometry',
+  const store = {
+    topic: {
+      title: 'Geometry',
+    },
+    subtopics: [
+      {
+        id: 1,
+        title: 'Triangles',
+        completed: true
+      },
+    ],
+    activeSubtopicId: 1,
   };
-
-  const subtopics = [
-    { id: 1, title: 'Triangles', completed: true },
-  ];
 
   it('renders without crashing', () => {
     const wrapper = shallow(
       <App
-        topic={topic as Topic}
-        subtopics={subtopics as Subtopic[]}
+        topic={store.topic}
+        subtopics={store.subtopics}
+        activeSubtopicId={store.activeSubtopicId}
       />
     );
 
