@@ -5,13 +5,20 @@ import './index.css';
 import { App } from './App';
 import { Header } from './Header/Header';
 import { Navigation } from './Navigation/Navigation';
+import { NavigationItem } from './NavigationItem/NavigationItem';
 import { Subtopics } from './Subtopics/Subtopics';
 import { TabsBar } from './TabsBar/TabsBar';
 
 ReactDOM.render(
   <App>
     <Header>
-      <Navigation />
+      <Navigation
+        navigationItems={[
+          <NavigationItem key={0}/>,
+          <NavigationItem key={1}/>,
+          <NavigationItem key={2}/>,
+        ]}
+      />
     </Header>
     <Subtopics />
     <TabsBar />
